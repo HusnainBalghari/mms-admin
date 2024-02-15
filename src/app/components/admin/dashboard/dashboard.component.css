@@ -1,0 +1,38 @@
+.dashboard-topbar{
+
+}
+.dashboard-topbar p{
+    border-bottom: 2px solid rgb(192 189 0);
+    width: 100%;
+    font-weight: bold;
+}
+
+.widget-header{
+    border-bottom: 2px solid rgb(211 211 211);
+    width: 100%;
+    text-align: center;;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    padding-bottom: 1px;
+    color: gray;
+    font-size: 13px;
+  }
+
+.total-pharmacies{
+    background-color: white;
+    height: 100PX;
+}
+
+.total-pharmacies-count{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    color: gray;
+}
+
+.file-recieved-status{
+    background-color: white;
+    height: calc(100vh - 245px);
+}
+

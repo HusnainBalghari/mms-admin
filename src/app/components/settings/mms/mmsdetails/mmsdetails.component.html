@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="col-12 col-12 shadow-sm right-header">
+        <h4>MMS Settings Detail</h4>
+    </div>
+</div>
+<div class="row justify-content-center right-content">
+    <div class="col-10">
+        <div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control form-control-lg" [(ngModel)]="mmsSetting.name">
+            </div>
+            <div class="form-group mt-2">
+                <label for="description">Description:</label>
+                <textarea class="form-control" [(ngModel)]="mmsSetting.description"></textarea>
+            </div>
+            <div class="form-check mt-2">
+                <input type="checkbox" class="form-check-input" [(ngModel)]="mmsSetting.active">
+                <label class="form-check-label" for="active">Active</label>
+            </div>
+            <div class="row mt-5">
+                <div class="col-6">
+                    <h5>MMS Setting Details</h5>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn btn-sm btn-outline-primary" (click)="addNewDetail()">
+                        <i class="bi bi-plus"></i> Add New
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Field Name</th>
+                                <th>Field Value</th>
+                                <th>Active</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of mmsSettingDetails">
+                                <td><input type="text" class="form-control" [(ngModel)]="item.fieldName"></td>
+                                <td><input type="text" class="form-control" [(ngModel)]="item.fieldValue"></td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input mt-2" type="checkbox" [(ngModel)]="item.active"
+                                            name="active">
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-primary mx-2"
+                                        (click)="saveDetail(item)">
+                                        <i class="bi bi-save"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger"
+                                        (click)="deleteDetail(item.id)">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <button type="button" class="btn btn btn-primary" (click)="save()">Save</button>
+                    <a routerLink="/settings/mmssetting" class="btn btn btn-secondary mx-2">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

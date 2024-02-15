@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-12 col-12 shadow-sm right-header">
+        <h4>Add MMS Settings</h4>
+    </div>
+</div>
+<div class="row justify-content-center right-content">
+    <div class="col-10">
+        <div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control form-control-lg" [(ngModel)]="mmsSetting.name">
+            </div>
+            <div class="form-group mt-2">
+                <label for="description">Description:</label>
+                <textarea class="form-control" [(ngModel)]="mmsSetting.description"></textarea>
+            </div>
+            <div class="form-check mt-2">
+                <input type="checkbox" class="form-check-input" [(ngModel)]="mmsSetting.active">
+                <label class="form-check-label" for="active">Active</label>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-12">
+                    <button type="button" class="btn btn btn-primary" (click)="save()">Save</button>
+                    <a routerLink="/settings/mmssetting" class="btn btn btn-secondary mx-2">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

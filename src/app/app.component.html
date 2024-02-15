@@ -1,0 +1,9 @@
+<app-navbar></app-navbar>
+<main class="d-flex flex-nowrap">
+  
+<app-sidebar *ngIf="authService.isLoggedIn()"></app-sidebar>
+<div class="main-container container-fluid">
+  <router-outlet></router-outlet>
+</div>
+</main>
+

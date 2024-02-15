@@ -1,0 +1,45 @@
+<div class="flex-shrink-0 p-3" style="width: 280px; height: calc(100vh - 45px); box-shadow: 0px 0px 10px silver;">
+    <a routerLink="/admin/dashboard" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none justify-content-center">
+      <img class="bi pe-none me-2" width="60%" height="45" src="assets/img/logo.png" />
+    </a>
+    <breadcrumb #parent>  
+      <ol class="breadcrumb">
+        <ng-template ngFor let-route [ngForOf]="parent.breadcrumbs">
+          <li *ngIf="!route.terminal" class="breadcrumb-item">
+            <a href="" class="text-decoration-none text-warning" [routerLink]="[route.url]">{{ route.displayName }}</a>
+          </li>
+          <li *ngIf="route.terminal" class="breadcrumb-item active" aria-current="page"><span class="border-bottom text-primary">{{ route.displayName }}</span></li>
+        </ng-template>
+      </ol>
+    </breadcrumb>  
+    <ul class="list-unstyled ps-0">
+      <li  class="mb-1"><a routerLink="/admin/dashboard" class="btn btn-sm d-inline-flex align-items-center rounded w-100 text-primary">Today's Submission Dashboard</a></li>
+      <li  class="mb-1"><a routerLink="/admin/dashboard" class="btn btn-sm d-inline-flex align-items-center rounded w-100 text-primary"><i class="bi bi-journal-richtext me-2"></i>File Submission History</a></li>
+      <li  class="mb-1"><a routerLink="/admin/dashboard" class="btn btn-sm d-inline-flex align-items-center rounded w-100 text-primary"><i class="bi bi-journal me-2"></i>Submit Pending</a></li>
+      <li  class="mb-1"><a routerLink="/admin/dashboard" class="btn btn-sm d-inline-flex align-items-center rounded w-100 text-primary"><i class="bi bi-tools me-2"></i>Pharmacies with data issue</a></li>
+      <li  class="mb-1"><a routerLink="/admin/dashboard" class="btn btn-sm d-inline-flex align-items-center rounded w-100 text-primary"><i class="bi bi-people me-2"></i>Pharmacy Rx Submission History</a></li>
+      <li  class="mb-1"><a routerLink="/admin/dashboard" class="btn btn-sm d-inline-flex align-items-center rounded w-100 text-primary"><i class="bi bi-people me-2"></i>User Management</a></li>
+      <!-- <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed w-100 text-primary" data-bs-toggle="collapse" data-bs-target="#setting-collapse" aria-expanded="true">
+          Settings
+        </button>
+        <div class="collapse show" id="setting-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a routerLink="/settings/mmssetting" class="link-body-emphasis d-inline-flex text-decoration-none rounded w-95 text-primary">MMS Setting</a></li>
+            <li><a routerLink="/settings/pharmacysetting" class="link-body-emphasis d-inline-flex text-decoration-none rounded w-95 text-primary">Pharmacy Setting</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top my-3"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-primary" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+          Account
+        </button>
+        <div class="collapse" id="account-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a (click)="logout()" role="button" class="link-body-emphasis d-inline-flex text-decoration-none rounded text-primary">Sign out</a></li>
+          </ul>
+        </div>
+      </li> -->
+    </ul>
+  </div>

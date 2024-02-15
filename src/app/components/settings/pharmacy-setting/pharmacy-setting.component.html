@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-12 shadow-sm right-header">
+      <div class="row">
+        <div class="col-6">
+          <h4>Pharmacy Settings</h4>
+        </div>
+        <div class="col-6 text-end">
+          <a routerLink="/settings/addpharmacy" class="btn btn-sm btn-success mx-3">Add New</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row right-content">
+    <div class="col-12">
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Active</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr *ngFor="let setting of mmsSetting">
+            <th scope="row">{{setting.id}}</th>
+            <td>{{setting.name}}</td>
+            <td>{{setting.description}}</td>
+            <td>{{setting.active? 'Active': 'Not Active'}}</td>
+            <td>
+              <button type="button" class="btn btn-sm btn-outline-primary" (click)="gotToDetails(setting.id)">
+                <i class="bi bi-eye"></i>
+              </button>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </div>
